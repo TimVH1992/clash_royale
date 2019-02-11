@@ -7,6 +7,7 @@ canvas.height = window.innerHeight;
 // gebouwen en kaarten
 const towerLeft = document.getElementById("towerLeft");
 const towerRight = document.getElementById("towerRight");
+const elixer = document.getElementById("elixer");
 const archers = document.getElementById("archers");
 const placeholder = document.getElementById("placeholder");
 const ice_spirit = document.getElementById("ice_spirit");
@@ -15,31 +16,32 @@ const skelet = document.getElementById("skelet");
 const valkerie = document.getElementById("valkerie");
 const wizzard = document.getElementById("wizzard");
 
-
+const cardArr = [towerLeft, towerRight, archers, ice_spirit, musketiers, skelet, valkerie, wizzard];
+console.log(cardArr[0]);
 
 c.fillStyle = 'blue';
-c.fillRect(650, 0, 50, 660);
+c.fillRect(700, 0, 100, 670);
 
 c.fillStyle = "brown";
-c.fillRect(350, 100, 630, 80);
-c.fillRect(350, 420, 630, 80);
+//paden tussen archer towers
+c.fillRect(370, 50, 750, 80);
+c.fillRect(370, 370, 750, 80);
+//paden bij main tower
+c.fillRect(300, 50, 80, 400);
+c.fillRect(1130, 50, 80, 400);
 
 
 
 window.onload = function(){
-c.drawImage(towerLeft, 200, 80);
-c.drawImage(towerLeft, 200, 400);
+c.drawImage(towerLeft, 180, 200);
+c.drawImage(towerRight, 1200, 200);
 
-c.drawImage(towerRight, 1000, 80);
-c.drawImage(towerRight, 1000, 400);
-c.drawImage(archers, 400, 510, 120, 150);
-c.drawImage(ice_spirit, 540, 510, 120, 150);
-c.drawImage(musketiers, 680, 520, 110, 140);
-c.drawImage(skelet, 820, 520, 110, 140);
+c.drawImage(towerLeft, 350, 35);
+c.drawImage(towerLeft, 350, 355);
 
-c.drawImage(placeholder, 395, 500, 140, 180);
-c.drawImage(placeholder, 535, 500, 140, 180);
-c.drawImage(placeholder, 675, 500, 140, 180);
-c.drawImage(placeholder, 810, 500, 140, 180);
+c.drawImage(towerRight, 1050, 32);
+c.drawImage(towerRight, 1050, 352);
 
+c.drawImage(elixer, 50, 590, 40, 60);
+c.drawImage(elixer, 50, 520, 40, 60);
 };
