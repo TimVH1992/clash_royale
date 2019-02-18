@@ -16,6 +16,9 @@ const skelet = document.getElementById("skelet");
 const valkerie = document.getElementById("valkerie");
 const wizzard = document.getElementById("wizzard");
 
+var lastTime = 0;
+
+
 const cardArr = [towerLeft, towerRight, archers, ice_spirit, musketiers, skelet, valkerie, wizzard];
 console.log(cardArr[0]);
 
@@ -42,6 +45,33 @@ c.drawImage(towerLeft, 350, 355);
 c.drawImage(towerRight, 1050, 32);
 c.drawImage(towerRight, 1050, 352);
 
-c.drawImage(elixer, 50, 590, 40, 60);
-c.drawImage(elixer, 50, 520, 40, 60);
-};
+c.drawImage(elixer, 0, 0);
+let elixergo = 0;
+/* while (elixergo < 10) {
+    
+    var thisTime = 0; //Zet hier huidige tijd
+
+    elixergo += thisTime - lastTime;
+    lastTime = thisTime;
+} */
+let zeventig = 70;
+let nul = 0;
+for (let j = 0; j < elixergo; j++){
+
+nul = (nul+zeventig);
+
+
+c.drawImage(elixer, 0, (nul) );
+console.log (nul);
+}
+
+
+
+
+
+//if (elixergo = 1) {
+//    c.drawImage(elixer, 50, 590, 40, 60);
+  //}
+
+
+}
